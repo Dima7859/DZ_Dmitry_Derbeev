@@ -1,0 +1,109 @@
+table {
+    margin: 100px;
+    border: 1px solid #000;
+    border-spacing: 0pc;
+    font-size: 20px;
+    text-align: center;
+}
+
+td {
+    border: 1px solid #000;
+    height: 50px;
+    width: 50px;
+}
+
+td:last-child , td:first-child{
+    background-color: greenyellow !important;
+    height: 50px;
+    width: 30px;
+}
+
+.fild {
+    background-color: greenyellow !important;
+    height: 30px !important;
+    width: 50px;
+}
+
+.chess tr:nth-child(odd) td:nth-child(odd) {
+    background: rgb(145, 145, 145);
+}
+
+.chess tr:nth-child(even) td:nth-child(even) {
+    background: rgb(145, 145, 145);
+}
+
+td:last-child ,#reversal{
+    transform: rotate(0.5turn);
+}
+
+#figures_white > td:nth-child(5) {
+    background-image: url(./chess.png);
+    background-repeat: no-repeat;
+    background-position: -48px -50px;
+}
+
+#figures_white > td:nth-child(6) {
+    background-image: url(./chess.png);
+    background-repeat: no-repeat;
+    background-position: 6px -50px;
+}
+
+#figures_white > td:nth-child(4) , #figures_white > td:nth-child(7){
+    background-image: url(./chess.png);
+    background-repeat: no-repeat;
+    background-position: -154px -50px;
+}
+
+#figures_white > td:nth-child(3) , #figures_white > td:nth-child(8){
+    background-image: url(./chess.png);
+    background-repeat: no-repeat;
+    background-position: -209px -50px;
+}
+
+#figures_white > td:nth-child(2) , #figures_white > td:nth-child(9){
+    background-image: url(./chess.png);
+    background-repeat: no-repeat;
+    background-position: -101px -50px;
+}
+
+#pawns_white > td:not(:first-child):not(:last-child) {
+    background-image: url(./chess.png);
+    background-repeat: no-repeat;
+    background-position: -260px -50px;
+}
+
+#pawns_black > td:not(:first-child):not(:last-child) {
+    background-image: url(./chess.png);
+    background-repeat: no-repeat;
+    background-position: -260px 0px;
+}
+
+#figures_black > td:nth-child(4) , #figures_black > td:nth-child(7){
+    background-image: url(./chess.png);
+    background-repeat: no-repeat;
+    background-position: -154px 0px;
+}
+
+#figures_black > td:nth-child(3) , #figures_black > td:nth-child(8){
+    background-image: url(./chess.png);
+    background-repeat: no-repeat;
+    background-position: -209px 0px;
+}
+
+#figures_black > td:nth-child(2) , #figures_black > td:nth-child(9){
+    background-image: url(./chess.png);
+    background-repeat: no-repeat;
+    background-position: -101px 0px;
+}
+
+#figures_black > td:nth-child(5) {
+    background-image: url(./chess.png);
+    background-repeat: no-repeat;
+    background-position: -48px 0px;
+}
+
+#figures_black > td:nth-child(6) {
+    background-image: url(./chess.png);
+    background-repeat: no-repeat;
+    background-position: 6px 0px;
+}
