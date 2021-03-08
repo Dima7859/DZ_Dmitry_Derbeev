@@ -11,21 +11,21 @@
             <div class="header">
                 <div class="header1">
                     <a href="https://en.wikipedia.org/wiki/Human" target="_blank">
-                        <img class="logo1" src="./325-3256276_human.png" alt="Error">
+                        <img class="logo1" src="./IMG/325-3256276_human.png" alt="Error">
                     </a>
                 </div>
                 <div class="header2">
                     <div>
-                        <a href="./Under_construction.html" target="__blank"><button>Home</button></a>
+                        <a href="./other/Under_construction.html" target="__blank"><button>Home</button></a>
                     </div>
                     <div>
                         <a href="https://www.bbc.com/news/world" target="__blank"><button>News</button></a>
                     </div>
                     <div>
-                        <a href="./Under_construction.html" target="__blank"><button>Messenger</button></a>
+                        <a href="./other/Under_construction.html" target="__blank"><button>Messenger</button></a>
                     </div>
                     <div>
-                        <a href="./Sponsor.html" target="__blank"><button>Sponsor</button></a>
+                        <a href="./other/Sponsor.html" target="__blank"><button>Sponsor</button></a>
                     </div>
                     <div>
                         <a href="https://www.google.by/" target="__blank"><button>Search</button></a>
@@ -35,63 +35,71 @@
                     <div class="links">
                         <a href="#zatemnenie" ><button class="login">Sign Up</button></a>
                         <div id="zatemnenie">
-                            <div id="okno">
-                                <form>
-                                    <div>
-                                        <h1>Login</h1>
-                                        <label for="emael">Emael</label>
-                                        <input id="email" type="text" placeholder="Enter Email...">
-                                    </div>
-                                    <div>
-                                        <label for="password">Password</label>
-                                        <input id="password" type="password" placeholder="Enter password...">
-                                    </div>
-                                    <a href="./Under_construction.html" target="__blank">Forgot password?</a>
-                                    <div>
-                                        <button class="close"><a href="#">Close</a></button>
-                                        <button class="close"><a href="#">Enter</a></button>
-                                    </div>
-                                </form>
-                            </div>
+                                <div >
+                                    <form>
+                                        <div class="gradient">
+                                            <div id="okno">
+                                                <div>
+                                                    <h1>Login</h1>
+                                                    <label for="emael">Emael</label>
+                                                    <input id="email" type="email" placeholder="Enter Email..." required>
+                                                </div>
+                                                <div>
+                                                    <label for="password">Password</label>
+                                                    <input id="password" type="password" placeholder="Enter password..." required>
+                                                </div>
+                                                <a href="./other/Under_construction.html" target="__blank">Forgot password?</a>
+                                                <div>
+                                                    <button class="close"><a href="#">Close</a></button>
+                                                    <button class="enter" type="submit">Enter</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
                         </div>
                         <a href="#zatemnenie2"><button class="registration">Registration</button></a>
                         <div id="zatemnenie2">
-                            <div id="okno2">
+                            <div>
                                 <form>
-                                    <h1>Registration</h1>
-                                    <div>
-                                        <label for="name">Name</label>
-                                        <input id="name" type="text" placeholder="Enter Name...">
-                                    </div>
-                                    <div>
-                                        <label for="emael">Emael</label>
-                                        <input id="email" type="text" placeholder="Enter Email...">
-                                    </div>
-                                    <div>
-                                        <label for="password1">Password</label>
-                                        <input id="password1" type="password" placeholder="Enter password...">
-                                    </div>
-                                    <div>
-                                        <label for="password2">Password</label>
-                                        <input id="password2" type="password" placeholder="Confirm password...">
-                                    </div>
-                                    <div>
-                                        <label for="years">Date of Birth</label>
-                                        <input type="date" name="calendar">
-                                    </div>
-                                    <div class="gender_btns">
-                                        <label for="1">Male</label>
-                                        <input type="radio" id="1" name="gender">
-                                        <label for="2">Female</label>
-                                        <input type="radio" id="2" name="gender">
-                                    </div>
-                                    <div class="checkbox_btnx">
-                                        <label for="licence">Consent to the newsletter</label>
-                                        <input type="checkbox" id="licence">
-                                    </div>
-                                    <div>
-                                        <button class="close"><a href="#">Close</a></button>
-                                        <button class="close"><a href="#">Regist</a></button>
+                                    <div class="gradient2">
+                                        <div id="okno2">
+                                            <h1>Registration</h1>
+                                            <div>
+                                                <label for="name">Name</label>
+                                                <input id="name" type="text" placeholder="Enter Name..." required>
+                                            </div>
+                                            <div>
+                                                <label for="emael">Emael</label>
+                                                <input id="email" type="email" placeholder="Enter Email..." required>
+                                            </div>
+                                            <div>
+                                                <label for="password1">Password</label>
+                                                <input id="password1" type="password" placeholder="Enter password..." required>
+                                            </div>
+                                            <div>
+                                                <label for="password2">Password</label>
+                                                <input id="password2" type="password" placeholder="Confirm password..." required>
+                                            </div>
+                                            <div>
+                                                <label for="years">Date of Birth</label>
+                                                <input type="date" name="calendar" required>
+                                            </div>
+                                            <div class="gender_btns">
+                                                <label for="1">Male</label>
+                                                <input type="radio" id="1" name="gender" required>
+                                                <label for="2">Female</label>
+                                                <input type="radio" id="2" name="gender">
+                                            </div>
+                                            <div class="checkbox_btnx">
+                                                <label for="licence">Consent to the newsletter</label>
+                                                <input type="checkbox" id="licence" required>
+                                            </div>
+                                            <div>
+                                                <button class="close"><a href="#">Close</a></button>
+                                                <button class="regist" type="submit">Regist</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </form>
                             </div>
@@ -112,7 +120,7 @@
                 <div class="center2">
                     <div class="text">
                         <a href="https://en.wikipedia.org/wiki/Evolution" target="__blank">
-                            <img class="evolution" src="./depositphotos_37663463-stock-photo-evolution.jpg" alt="Error">
+                            <img class="evolution" src="./IMG/depositphotos_37663463-stock-photo-evolution.jpg" alt="Error">
                         </a>
                         <p>
                             <a name="Humans"></a>
@@ -222,7 +230,7 @@
                     </div>
                 </div>
                 <div class="center3">
-                    <a href="./Error.html" target="__blank"><img class="advertising" src="./4541215641.png" alt="Error"></a>
+                    <a href="./other/Error.html" target="__blank"><img class="advertising" src="./IMG/4541215641.png" alt="Error"></a>
                 </div>
             </div>
             <div class="inf">
@@ -236,15 +244,15 @@
                 </div>
                 <div class="inf2">
                     <a href="https://en.wikipedia.org/wiki/Human" target="_blank">
-                        <img class="logo2" src="./325-3256276_human.png" alt="Error">
+                        <img class="logo2" src="./IMG/325-3256276_human.png" alt="Error">
                     </a>
                 </div>
                 <div class="inf3">
                     <h1>Contact Information</h1>
                     <ul>
                         <li>Phone number &rArr; 937-99-92</li>
-                        <li>E-mail &rArr; <a href="./Error.html" target="_blank">neadequate@gmail.com</a></li>
-                        <li>Patreon &rArr; <a href="./Error.html" target="_blank">https://www.patreon.com/neadequate</a></li>
+                        <li>E-mail &rArr; <a href="./other/Error.html" target="_blank">neadequate@gmail.com</a></li>
+                        <li>Patreon &rArr; <a href="./other/Error.html" target="_blank">https://www.patreon.com/neadequate</a></li>
                     </ul>
                 </div>
             </div>
