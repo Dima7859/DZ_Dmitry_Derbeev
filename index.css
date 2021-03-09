@@ -302,8 +302,15 @@ form:invalid .enter{
 }
 
 input {
-    background: rgb(231 210 186);
     margin-bottom: 10px;
+}
+
+#email:invalid, #password:invalid, #password1:invalid, #password2:invalid, #name:invalid, #years:invalid {
+    background-color: #f86d6d;
+}
+
+#email:valid, #password:valid, #password1:valid, #password2:valid, #name:valid, #years:valid {
+    background-color: #95ff95;
 }
 
 .registration {
