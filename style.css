@@ -1,0 +1,34 @@
+@import url(./css/header.css);
+@import url(./css/model.css);
+@import url(./css/center.css);
+@import url(./css/inf.css);
+
+* {
+    margin: 0;
+}
+
+body {
+    background: url(./IMG/soft_wallpaper.png);
+    font-family: 'Acme', sans-serif;
+}
+
+a{
+    color: #001b4c;;
+    text-decoration: none;
+}
+
+.all {
+    /* min-width: 1395px; */
+    display: grid;
+    grid-template-columns: 340px auto 300px;
+    grid-auto-rows: minmax(90px, auto);
+    gap: 5px;
+}
+
+@media (max-width: 800px) {
+    .all {
+        min-width: 370px;
+        display: flex;
+        flex-direction: column;
+    }
+}
