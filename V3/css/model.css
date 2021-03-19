@@ -1,0 +1,76 @@
+.gradient, .gradient2, #okno, #okno2 {
+  border: 3px solid #000;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+#zatemnenie, #zatemnenie2 {
+  background: rgba(102, 102, 102, 0.5);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none; }
+
+.gradient {
+  width: 300px;
+  height: 230px;
+  margin: auto; }
+
+.gradient2 {
+  width: 300px;
+  height: 350px;
+  margin: auto; }
+
+#okno, #okno2 {
+  margin: 10px;
+  text-align: center;
+  padding: 15px;
+  background: #858585; }
+  #okno input, #okno2 input {
+    margin-bottom: 10px; }
+
+.close, .Regist, .Enter {
+  height: 30px;
+  width: 80px;
+  border: 1px solid #000;
+  border-radius: 20%;
+  margin: 10px;
+  text-decoration: none;
+  cursor: pointer; }
+
+form:invalid .gradient, form:invalid .gradient2 {
+  background: linear-gradient(90deg, #ffa8a8 0%, #ff7878 31%, #ff2e2e 68%, red 100%);
+  animation: animatedg 2.5s ease infinite;
+  background-size: 400%; }
+
+form:valid .gradient, form:valid .gradient2 {
+  background: linear-gradient(90deg, #c3ffbf 0%, #95ff8f 34%, #3cff30 67%, #0eff00 100%);
+  animation: animatedg 2.5s ease infinite;
+  background-size: 400%; }
+
+@keyframes animatedg {
+  0% {
+    background-position: 0; }
+  50% {
+    background-position: 100%; }
+  100% {
+    background-position: 0; } }
+form:invalid .enter, form:invalid .regist {
+  opacity: 0.5;
+  pointer-events: none; }
+
+#zatemnenie:target, #zatemnenie2:target {
+  display: block; }
+
+#email:invalid, #password:invalid, #password1:invalid, #password2:invalid, #name:invalid, #years:invalid {
+  background-color: #f86d6d; }
+
+#email:valid, #password:valid, #password1:valid, #password2:valid, #name:valid, #years:valid {
+  background-color: #95ff95; }
+
+/*# sourceMappingURL=model.css.map */

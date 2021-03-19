@@ -1,0 +1,19 @@
+@import './variables.scss';
+
+.inf1, .inf2, .inf3 {
+    @extend %centered;
+    margin-bottom: 20px;
+    ul {
+        list-style-type: none;
+    }
+
+    img {
+        height: 100px;
+    }
+}
+
+@media (max-width: 800px) {
+    .inf2 {
+        display: none;
+    }
+}

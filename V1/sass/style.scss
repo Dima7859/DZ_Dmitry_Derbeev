@@ -1,14 +1,14 @@
-@import url(./css/header.css);
-@import url(./css/model.css);
-@import url(./css/center.css);
-@import url(./css/inf.css);
+@import './header.scss';
+@import './model.scss';
+@import './center.scss';
+@import './inf.scss';
 
 * {
     margin: 0;
 }
 
 body {
-    background: url(./IMG/soft_wallpaper.png);
+    background: url(../IMG/soft_wallpaper.png);
     font-family: 'Acme', sans-serif;
 }
 

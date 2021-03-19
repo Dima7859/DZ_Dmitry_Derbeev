@@ -1,15 +1,16 @@
-.header1 {
-    display: grid;
-    align-items: center;
-    justify-items: center;
+@import './variables.scss';
+
+.header1, .header2, .header3, {
+    @extend %centered;
 }
 
 .logo1 {
     height: 100px;
     animation: spin 5s linear infinite;
-}
-.logo1:hover {
-    animation-play-state: paused;
+
+    &:hover {
+        animation-play-state: paused;
+    }
 }
 
 @keyframes spin {
@@ -22,18 +23,13 @@
 }
 
 .header2 {
-    display: grid;
     grid-template-columns: repeat(5, auto);
-    align-items: center;
-    justify-items: center;
 }
 
 @media (max-width: 800px) {
     .header2 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 5px;
     }
 }
 
@@ -47,17 +43,11 @@ button {
     background: #1f8dff;
     transition: background 1.2s;
     font-family: 'Acme', sans-serif;
-}
 
-button:active {
-    background: #d1d9fa;
-    transition: background 0s;
-  }
-
-.header3 {
-    display: grid;
-    align-items: center;
-    justify-items: center;
+    &:active {
+        background: #d1d9fa;
+        transition: background 0s;
+    }
 }
 
 .login {
