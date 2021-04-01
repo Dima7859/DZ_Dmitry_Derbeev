@@ -71,9 +71,11 @@ function point() {
     if (memeryNewNumber) {
         localOperationMemory = '0.';
         memeryNewNumber = false;
+        inputCalc.value = localOperationMemory ;
     }else {
         if (localOperationMemory.indexOf('.') === -1 ) {
             localOperationMemory += '.';
+            inputCalc.value = localOperationMemory ;
         }
     }
 }
