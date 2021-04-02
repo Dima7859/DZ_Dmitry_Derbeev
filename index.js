@@ -13,8 +13,8 @@ function work(ver1, ver2) {
     const arr3 = ver1.concat(ver2);
     console.log(arr3);
 
-    let a = +prompt('Введите первое число для добовления в массив');
-    let b = +prompt('Введите второе число для добовления в массив');
+    let a = +prompt('Enter the first number to add to the array');
+    let b = +prompt('Enter the second number to add to the array');
     arr3.push(a, b);
     console.log(arr3);
 
