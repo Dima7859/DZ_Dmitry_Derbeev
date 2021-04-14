@@ -252,7 +252,7 @@ function propertyValue(array, key) {
         for (let i = 0; i < array.length; i++) {
             res.push(array[i][key]);
         }
-        res = res.join(', ');
+        // res = res.join(', ');
         return res;
     }else {
         return 'такого ключа нет';
