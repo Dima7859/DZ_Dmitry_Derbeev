@@ -1,136 +1,95 @@
-//__________exercise from 1 to 3________
+const inp = document.getElementById('inp');
+const form = document.querySelector('form');
+let allArr = localStorage.getItem('inp') ? JSON.parse(localStorage.getItem('inp')) : [];
+
+localStorage.setItem('inp', JSON.stringify(allArr));
+const data = JSON.parse(localStorage.getItem('inp'));
+
+const ul = document.createElement('ul');
+document.body.append(ul);
 
 
-class Worker{
+form.addEventListener('submit', function (e) {
+    e.preventDefault();
 
-    #name;
-    #surname;
-    #rate;
-    #days;
+    if (inp.value === '') {
+        alert("Вы должны что-то написать!");
+    } else {
+        allArr.push(inp.value);
+        localStorage.setItem('inp', JSON.stringify(allArr));
+        liMaker(inp.value);
+        inp.value = "";
+    }
+});
 
-    get name(){
-        return this.#name
+const add = () => {
+    if (inp.value === '') {
+        alert("Вы должны что-то написать!");
+    } else {
+        allArr.push(inp.value);
+        localStorage.setItem('inp', JSON.stringify(allArr));
+        liMaker(inp.value);
+        inp.value = "";
+    }
+};
+
+const liMaker = (text) => {
+    const li = document.createElement('li');
+    li.textContent = text;
+    ul.appendChild(li);
+
+    const btn = document.createElement('button');
+    btn.innerHTML = '\u00D7';
+    btn.className = 'btnclose';
+    li.append(btn)
+
+    btn.onclick = () => {
+        console.log(li.textContent);
+        let contli = li.textContent;
+        contli = contli.split('');
+        contli.pop();
+        contli = contli.join('');
+        console.log(contli);
+        let arr = []
+        console.log(allArr);
+        allArr.forEach((item) => {
+            if (item !== contli) {
+                arr.push(item);
+            }
+        })
+        console.log(arr);
+        allArr = arr;
+        arr = [];
+        btn.remove();
+        li.remove();
+        console.log(allArr);
+        localStorage.setItem('inp', JSON.stringify(allArr));
     }
 
-    get surname(){
-        return this.#surname
-    }
-
-    get rate(){
-        return this.#rate
-    }
-
-    get days(){
-        return this.#days
-    }
-
-    set rate(value) {
-        this.#rate = value;
-    }
-
-    set days(value) {
-        this.#days = value;
-    }
-
-    constructor (name, surname, rate, days){
-        this.#name = name;
-        this.#surname = surname;
-        this.#rate = rate;
-        this.#days = days;
-    }
-
-    getSalary() {
-        return this.#rate * this.#days;
+    li.onclick  = () => {
+        const isClicked = li.getAttribute('clicked');
+        if (!isClicked) {
+            li.setAttribute('clicked', true);
+            li.style.textDecoration = 'line-through';
+            li.style.textDecorationColor = 'red';
+        } else {
+            li.removeAttribute('clicked');
+            li.style.textDecoration = 'none';
+        }
     }
 
 };
 
-
-user1 = new Worker('Anna', 'Ivanova', 1.5, 22);
-
-
-console.log(user1);
-console.log(user1.getSalary());
-
-user1.rate = 2;
-user1.days = 25; 
+data.forEach(item => {
+    liMaker(item);
+});
 
 
-console.log(user1.rate);
-console.log(user1.days);
-console.log(user1.getSalary());
-
-
-//_______________exercise 4________________
-
-
-//_______________version 1_________________
-
-
-// class Rectangle {
-
-//     constructor (length, width) {
-//         this.length = length;
-//         this.width = width;
-//     }
-
-//     square() {
-//         return this.length*this.width
-//     }
-
-// }
-
-// class Parallelepiped extends Rectangle{
-
-//     constructor (length, width, height) {
-//         super(length, width);
-//         this.height = height;
-//     }
-
-//     size() {
-//         return super.square()*this.height;
-//     }
-
-// };
-
-// figure1 = new Parallelepiped (5, 10, 5);
-
-// console.log(figure1.square());
-// console.log(figure1.size());
-
-
-//_______________version 2_________________
-
-
-class Parallelepiped {
-
-    constructor (length, width, height) {
-        this.length = length;
-        this.width = width;
-        this.height = height;
+const clearAll = () => {
+    localStorage.clear();
+    while (ul.firstChild) {
+        ul.removeChild(ul.firstChild);
     }
-    
-    size() {
-        return this.length * this.width * this.height
-    }
-
-}
-
-class Rectangle extends Parallelepiped{
-
-    constructor (length, width, height) {
-        super(length, width, height);
-    }
-
-    square() {
-        return this.length * this.width
-    }
-
+    allArr = [];
+    inp.value = "";
 };
-
-figure1 = new Rectangle (5, 10, 5);
-
-console.log(figure1);
-
-console.log(figure1.square());
-console.log(figure1.size());
