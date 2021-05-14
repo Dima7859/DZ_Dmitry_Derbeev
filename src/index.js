@@ -1,78 +1,48 @@
+import { initApi, singIn } from './api/api-handlers'
+import '../style/style.scss';
 
-let todos;
-const btnTrue = document.getElementById('btnTrue');
-const btnNotTrue = document.getElementById('btnNotTrue');
-const btnAll = document.getElementById('btnAll');
+window.onload = () => {
+    initApi();
 
-const block = document.getElementById('block');
-const ul = document.createElement('ul');
-block.prepend(ul);
+    const form = document.getElementById('form');
 
-
-function renderItems(ittd ,var1) {
-    let td = ittd;
-    const b = var1;
-    let tdInterim = [];
-
-
-    while (ul.firstChild) {
-        ul.removeChild(ul.firstChild);
-    }
-
-    if (b !== undefined) {
-        td.forEach(item => {
-            if (item.completed === b) {
-                tdInterim.push(item);
-            }
+    form.addEventListener('submit', event => {
+        event.preventDefault();
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        singIn(email, password).then( response => console.log('respoin', response))
         });
-        td = tdInterim;
-        tdInterim = [];
-    }
-
-    td.forEach(item => {
-    const li = document.createElement('li');
-    li.innerHTML = item.title;
-    ul.appendChild(li);
-    li.onclick  = () => {
-        const isClicked = li.getAttribute('clicked');
-        if (!isClicked) {
-            document.getElementById('addsound').play();
-            li.setAttribute('clicked', true);
-            li.style.color = 'red';
-            li.style.fontSize = '50px';
-        } else {
-            document.getElementById('sound').play();
-            li.removeAttribute('clicked');
-            li.removeAttribute("style")
-        }
-    };
-    });
 };
 
-const fetchtd = () => {
-    return fetch('https://jsonplaceholder.typicode.com/todos')
-    .then(response => response.json())
-    .then(json => todos = json);
+
+const log = document.getElementById('log');
+const zatemnenie = document.getElementById('zatemnenie');
+const btnclose = document.getElementById('btnclose');
+
+log.onclick = () => {
+    // const isClicked = zatemnenie.getAttribute('clicked');
+    // if (!isClicked) {
+        // zatemnenie.setAttribute('clicked', true);
+        zatemnenie.style.display = 'block';
+    // } else {
+    //     zatemnenie.removeAttribute('clicked');
+    //     zatemnenie.style.display = 'none';
+    // }
 };
 
-const getTodos = async () => {
-    await fetchtd();
-    renderItems(todos);
+btnclose.onclick = () => {
+    // console.log('cl');
+    // zatemnenie.removeAttribute('clicked');
+    zatemnenie.style.display = 'none';
 }
 
-getTodos();
-
-btnTrue.onclick = () => {
-    document.getElementById('tudu').play();
-    renderItems(todos, true);
-};
-
-btnNotTrue.onclick = () => {
-    document.getElementById('tudu').play();
-    renderItems(todos, false);
-};
-
-btnAll.onclick = () => {
-    document.getElementById('tudu').play();
-    renderItems(todos);
-};
+// zatemnenie.onclick = () => {
+//     const isClicked = zatemnenie.getAttribute('clicked');
+//     if (!isClicked) {
+//         zatemnenie.setAttribute('clicked', true);
+//         zatemnenie.style.display = 'block';
+//     } else {
+//         zatemnenie.removeAttribute('clicked');
+//         zatemnenie.style.display = 'none';
+//     }
+// };

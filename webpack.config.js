@@ -6,13 +6,17 @@ const { prototype } = require('html-webpack-plugin');
 module.exports = {
     entry: './src/index.js',
     output: {
-        filename: 'budle.js',
+        filename: 'budle.[chunkhash].js',
         path: path.resolve(__dirname, 'dist')
     },
     plugins: [
         new HTMLWebpackPlugin ({
+            filename: 'index.html',
             template: './src/index.html'
-
+        }),
+        new HTMLWebpackPlugin ({
+            filename: 'sing-in.html',
+            template: './src/templates/sing-in.html'
         }),
         new CleanWebpackPlugin()
     ],
