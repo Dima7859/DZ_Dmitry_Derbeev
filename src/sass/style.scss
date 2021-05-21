@@ -1,0 +1,131 @@
+@import './alliance.scss';
+@import './model.scss';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: url('../img/brick-wall--dark--1920x1080.png');
+    margin: 0px;
+}
+
+.hederBlockEntry {
+    display: flex;
+    justify-content: center;
+    position: static;
+
+    .hederBlockEntryChaild {
+        z-index: 5;
+        position: absolute;
+        top: -136px;
+        transition-duration: 1s;
+    }
+
+    .blockEntry{
+        min-width: 391px;
+        width: 400px;
+    }
+    
+    .imgIkonEnteyNotTiket, .imgIkonEnteyYesTiket{
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 5px;
+        left: 153px;
+    }
+
+    .login, .registration {
+        width: 100px;
+        height: 35px;
+        border-radius: 10px;
+        background-color: #3cb3f1;
+    }
+
+    .login {
+        position: absolute;
+        top: 82px;
+        left: 58px;
+    }
+
+    .registration {
+        position: absolute;
+        top: 82px;
+        left: 246px;
+    }
+
+    #exitMyPage {
+        font-size: 26px;
+        width: 142px;
+        height: 32px;
+        border-radius: 10px;
+        background-color: #3cb3f1;
+        position: absolute;
+        top: 102px;
+        left: 133px;
+    }
+
+    #weExitP, #wishExitP {
+        color: #000;
+        font-size: 30px;
+    }
+
+    #weExitP {
+        position: absolute;
+        top: 38px;
+        left: 84px;
+    }
+
+    #wishExitP{
+        position: absolute;
+        top: 38px;
+        left: 246px;
+    }
+
+    p{
+        cursor: default;
+        color: #fff;
+        position: absolute;
+        top: 138px;
+        left: 92px;
+    }
+    
+}
+
+.allblock {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px
+}
+
+.vidAl {
+    background-color: #000;
+}
+
+.vidAl2 {
+    border: 2px solid #000;
+    width: 48vw;
+}
+
+.vidOrc {
+    background-color: #000;
+}
+
+.vidOrc2 {
+    border: 2px solid #000;
+    width: 48vw;
+}
+
+.alAndOrc {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#imgGerAl {
+    width: 28vw;
+    cursor: pointer;
+}
+
+#imgGerOrc {
+    width: 28vw;
+    cursor: pointer;
+}
